@@ -1,18 +1,23 @@
 import React, {Component, useState} from "react";
 import '../styles/App.css';
 
-class App extends Component {
-    constructor(props) {
-		super(props);
-	};
+function App(){
+	const[showParagraph, setshowParagraph]= useState(false)
+	const showPara= ()=>{
+		setshowParagraph(true);
+	}
 
-    render() {
     	return(
     		<div id="main">
+				
 				{ /* Do not remove this main div!! */ }
+				<button id="click" onClick={showPara}>click</button>
+				{ showParagraph &&
+					<p>Hello, I've learnt to use the full-stack evaluation tool. This makes me so happy</p>
+				}
     		</div>
     	);
-    }
+    
 }
 
 
