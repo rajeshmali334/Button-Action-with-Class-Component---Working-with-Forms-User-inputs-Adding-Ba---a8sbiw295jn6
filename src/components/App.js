@@ -4,8 +4,11 @@ import '../styles/App.css';
 function App(){
 	const[showParagraph, setshowParagraph]= useState(false)
 	const showPara= ()=>{
+		if(showParagraph){
+		setshowParagraph(false);
+		}else{
 		setshowParagraph(true);
-	}
+		}
 
     	return(
     		<div id="main">
